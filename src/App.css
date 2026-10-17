@@ -35,4 +35,118 @@
 
 @media (max-width: 700px) { .app-shell { padding: 25px 14px; }.hero { padding-top: 20px; }.toolbar { padding: 16px 14px 10px; }
   .filter-bar { padding: 10px 14px 16px; }.list-heading { display: none; } .page-footer { flex-direction: column; }.result-count { font-size: .75rem; } 
+
+
+
+
+
+  
+/* Sección de Rick and Morty */
+
+.characters-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+.characters-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.characters-header h2 {
+  font-size: 2.2rem;
+  margin: 10px 0;
+}
+
+.characters-section .grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  );
+  gap: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.characters-section .card {
+  overflow: hidden;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 5px 18px rgb(0 0 0 / 8%);
+  transition: transform 0.2s ease;
+}
+
+.characters-section .card:hover {
+  transform: translateY(-5px);
+}
+
+.characters-section .card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.characters-section .card-content {
+  padding: 16px;
+}
+
+.characters-section .card h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.characters-section .card p {
+  margin: 8px 0;
+}
+
+.characters-section .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.characters-section .pagination button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.characters-section .pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.error-message {
+  color: #dc2626;
+}
+
+@media (max-width: 600px) {
+  .characters-section .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .characters-section .pagination {
+    gap: 10px;
+  }
+
+  .characters-section .pagination button {
+    padding: 9px 12px;
+  }
+}
+
 }
