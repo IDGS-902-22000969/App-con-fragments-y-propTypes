@@ -1,8 +1,7 @@
-
 import { NavLink } from 'react-router-dom'
 import './App.css'
+import './styles/Navbar.css'
 import AppRoutes from './router'
-
 
 function Navbar() {
   return (

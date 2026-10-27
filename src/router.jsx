@@ -8,6 +8,7 @@ import AgregarLenguaje from './Pages/AgregarLenguaje'
 import AcercaDe from './Pages/AcercaDe'
 import NoEncontrado from './Pages/NoEncontrado'
 
+
 function AppRoutes() {
   return (
     <Routes>
